@@ -16,30 +16,30 @@ export const NewsletterSection = () => {
   return (
     <HeadlessNewsletter>
       {(logic) => (
-        <section className="bg-muted/30 py-16 border-y">
+        <section className="bg-gradient-to-br from-primary/5 to-secondary/5 py-20 border-y border-primary/20">
           <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {logic.success ? (
-              <div className="space-y-4">
+              <div className="space-y-6">
                 <div className="flex justify-center">
-                  <div className="bg-primary/10 rounded-full p-3">
-                    <Mail className="h-8 w-8 text-primary" />
+                  <div className="bg-primary rounded-full p-4">
+                    <Mail className="h-10 w-10 text-white" />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-foreground">
-                  Thanks for subscribing!
+                <h3 className="text-3xl font-bold text-foreground">
+                  ¡Gracias por suscribirte!
                 </h3>
-                <p className="text-muted-foreground">
-                  You'll receive our best offers and promotions soon.
+                <p className="text-lg text-muted-foreground">
+                  Recibirás contenido exclusivo sobre neurociencia y empoderamiento directamente en tu correo.
                 </p>
               </div>
             ) : (
-              <div className="space-y-6">
-                <div className="space-y-2">
-                  <h3 className="text-2xl font-bold text-foreground">
-                    Want promotional emails?
+              <div className="space-y-8">
+                <div className="space-y-3">
+                  <h3 className="text-3xl md:text-4xl font-bold text-foreground">
+                    ¿Quieres recibir contenido exclusivo?
                   </h3>
                   <p className="text-lg text-muted-foreground">
-                    Subscribe to our newsletter and get exclusive offers
+                    Suscríbete a mi newsletter y recibe recursos, artículos y ofertas especiales sobre neurociencia y desarrollo personal
                   </p>
                 </div>
                 
@@ -48,28 +48,29 @@ export const NewsletterSection = () => {
                     e.preventDefault();
                     logic.handleSubscribe();
                   }}
-                  className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+                  className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto"
                 >
                   <Input 
                     type="email"
-                    placeholder="your@email.com"
+                    placeholder="tu@email.com"
                     value={logic.email}
                     onChange={(e) => logic.setEmail(e.target.value)}
                     disabled={logic.isSubmitting}
-                    className="flex-1"
+                    className="flex-1 h-12 text-base"
                     required
                   />
                   <Button 
                     type="submit"
                     disabled={logic.isSubmitting}
-                    className="sm:w-auto"
+                    size="lg"
+                    className="sm:w-auto bg-primary hover:bg-primary/90 font-semibold"
                   >
-                    {logic.isSubmitting ? 'Subscribing...' : 'Subscribe'}
+                    {logic.isSubmitting ? 'Suscribiendo...' : 'Suscribirme'}
                   </Button>
                 </form>
                 
                 {logic.error && (
-                  <p className="text-sm text-destructive">
+                  <p className="text-sm text-destructive font-medium">
                     {logic.error}
                   </p>
                 )}

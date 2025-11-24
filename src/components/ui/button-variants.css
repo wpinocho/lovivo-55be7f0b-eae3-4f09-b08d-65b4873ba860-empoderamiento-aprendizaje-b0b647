@@ -1,0 +1,8 @@
+/* Hero Button Variants */
+.btn-hero-primary {
+  @apply bg-white text-primary hover:bg-white/90 font-semibold;
+}
+
+.btn-hero-secondary {
+  @apply border-2 border-white text-white hover:bg-white/10 font-semibold;
+}
