@@ -109,7 +109,7 @@ export const EcommerceTemplate = ({
               <BrandLogoLeft />
             </div>
             <p className="mt-4 text-white/90 leading-relaxed">
-              Transformando vidas a través de la neurociencia del aprendizaje y el empoderamiento femenino
+              Transformando vidas a través de la neurociencia del aprendizaje y el empoderamiento
             </p>
           </div>
 

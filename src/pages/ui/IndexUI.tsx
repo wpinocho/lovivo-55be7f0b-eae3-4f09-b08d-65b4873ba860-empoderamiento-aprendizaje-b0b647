@@ -50,7 +50,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
               Transforma tu Aprendizaje y Empodera tu Mente
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
-              Descubre el poder de la neurociencia aplicada al aprendizaje y al empoderamiento femenino. 
+              Descubre el poder de la neurociencia aplicada al aprendizaje y al empoderamiento. 
               Cursos, talleres y recursos basados en investigación científica.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
